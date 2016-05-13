@@ -1,4 +1,19 @@
-:- module('thrift', [parse_file/2, parse_chunk/2]).
+:- module('thrift', [parse_file/2, parse_chunk/2,
+                     doc_header/2, doc_body/2,
+                     include_val/2,
+                     cpp_include_val/2,
+                     ns_scope/2, ns_id/2,
+                     literal_val/2,
+                     const_type/2, const_id/2, const_val/2,
+                     typedef_type/2, typedef_id/2,
+                     enum_id/2, enum_entries/2,
+                     senum_id/2, senum_entries/2,
+                     fields_entires/2,
+                     service_id/2, service_extends/2, service_functions/2,
+                     func_ow/2, func_type/2, func_id/2, func_sig/2, func_throw/2,
+                     map_ctype/2, map_ktype/2, map_vtype/2,
+                     set_ctype/2, set_vtype/2,
+                     list_ctype/2, list_vtype/2]).
 
 :- meta_predicate
        parse_file(+, -),
